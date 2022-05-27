@@ -7,20 +7,11 @@
  */
 
 import React from 'react';
-import {Button, Text, View} from 'react-native';
 import Home from './src/components/screens/Home';
+import FormStep1 from './src/components/screens/FormStep1';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-function FormScreen({navigation, route}) {
-  return (
-    <View>
-      <Text>Home Screen</Text>
-      <Button title="Foo" onPress={() => console.log(route.params.foo)} />
-    </View>
-  );
-}
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +23,7 @@ function App() {
           headerShown: false,
         }}>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Form" component={FormScreen} />
+        <Stack.Screen name="FormStep1" component={FormStep1} />
       </Stack.Navigator>
     </NavigationContainer>
   );
