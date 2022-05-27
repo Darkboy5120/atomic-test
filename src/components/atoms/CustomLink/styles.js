@@ -3,8 +3,11 @@ import theme from '../../../config/themes/dark';
 
 const styles = StyleSheet.create({
   link: {
-    textDecorationLine: 'underline',
-    color: theme.color.link,
+    color: theme.color.other2,
+  },
+  container: {
+    borderBottomWidth: 1,
+    borderBottomColor: theme.color.other2,
   },
 });
 
