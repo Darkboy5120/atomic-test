@@ -1,11 +1,11 @@
 import React from 'react';
 import {HeaderContainer, CustomHeader} from '../../molecules/HeaderKit';
-import CustomButton from '../../atoms/CustomButton';
 import RightFlow from '../../atoms/RightFlow';
 import CustomImage from '../../atoms/CustomImage';
 import CustomSection from '../../layouts/CustomSection';
 import styles from './styles';
 import CustomFlex from '../../layouts/CustomFlex';
+import ToFormButton from '../../molecules/ToFormButton';
 
 function WorkingWithUs() {
   return (
@@ -21,11 +21,7 @@ function WorkingWithUs() {
       />
       <RightFlow />
       <CustomFlex style={styles.fooWraper}>
-        <CustomButton
-          style={styles.fooMargin}
-          title="¡Quiero ser parte!"
-          center
-        />
+        <ToFormButton style={styles.fooMargin} center />
       </CustomFlex>
     </CustomSection>
   );
