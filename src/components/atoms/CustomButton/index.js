@@ -4,7 +4,16 @@ import CustomText from '../CustomText';
 import theme from '../../../config/themes/dark';
 import styles from './styles';
 
-function CustomButton({style, title, bgColor, textColor, type, width, center}) {
+function CustomButton({
+  style,
+  title,
+  bgColor,
+  textColor,
+  type,
+  width,
+  center,
+  onPress,
+}) {
   const typeStylesArr = {
     button: [styles.buttonContainer, styles.buttonText],
     submit: [styles.submitContainer, styles.submitText],
@@ -24,7 +33,7 @@ function CustomButton({style, title, bgColor, textColor, type, width, center}) {
     style,
   ];
   return (
-    <Pressable title={title} style={buttonStyle}>
+    <Pressable onPress={onPress} title={title} style={buttonStyle}>
       <CustomText style={typeStyle[1]} center bold>
         {title}
       </CustomText>
