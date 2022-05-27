@@ -4,7 +4,7 @@ import theme from '../../../config/themes/dark';
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
-    marginBottom: theme.spacing.xxl,
+    marginVertical: theme.spacing.xxl,
   },
   icon: {
     transform: [{rotate: '-45deg'}],
