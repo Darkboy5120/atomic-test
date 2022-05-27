@@ -6,13 +6,20 @@ import OurTeam from '../../organisms/OurTeam';
 import HomeBackgroundImage from '../../../images/MaskGroup1.png';
 import WorkingWithUs from '../../organisms/WorkingWithUs';
 import Expertise from '../../organisms/Expertise';
+import Welcome from '../../organisms/Welcome';
 import styles from './styles';
 
 function Home() {
   return (
     <View>
       <ScrollView>
-        <CustomImage style={styles.background} source={HomeBackgroundImage} />
+        <CustomImage
+          resizeMode="stretch"
+          style={styles.background1}
+          source={HomeBackgroundImage}
+        />
+        <CustomImage style={styles.background2} source={HomeBackgroundImage} />
+        <Welcome />
         <Expertise />
         <WorkingWithUs />
         <OurTeam />
