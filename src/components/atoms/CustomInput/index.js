@@ -21,7 +21,7 @@ function checkValidation(text, validation, logName, setLog, setOk) {
   } else if (length < min) {
     updateInput(false, `${logName} debera tener mínimo ${min} caracteres`);
   } else if (length > max) {
-    updateInput(false, `${logName} debera tener maximo ${min} caracteres`);
+    updateInput(false, `${logName} debera tener maximo ${max} caracteres`);
   } else if (text.match(regex)) {
     updateInput(false, `${logName} no tiene el formato apropiado`);
   } else {
