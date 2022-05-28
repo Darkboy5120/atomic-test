@@ -1,12 +1,21 @@
 import {StyleSheet} from 'react-native';
+import theme from '../../../config/themes/dark';
 
 const styles = StyleSheet.create({
   background1: {
     position: 'absolute',
-    left: -150,
-    top: -20,
-    width: '200%',
-    height: 500,
+    left: '-90%',
+    top: -180,
+    width: '400%',
+    height: '110%',
+    transform: [{rotate: '90deg'}],
+  },
+  background2: {
+    width: '100%',
+    height: 400,
+  },
+  formContainer: {
+    marginTop: theme.spacing.xl,
   },
 });
 
