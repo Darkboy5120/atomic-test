@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable} from 'react-native';
+import {Pressable, ActivityIndicator} from 'react-native';
 import CustomText from '../CustomText';
 import theme from '../../../config/themes/dark';
 import styles from './styles';
@@ -38,12 +38,16 @@ function CustomButton({
   ];
   return (
     <Pressable
-      disabled={!ok}
+      disabled={!ok || loading}
       onPress={onPress}
       title={title}
       style={buttonStyle}>
       <CustomText style={typeStyle[1]} center bold>
-        {title}
+        {loading ? (
+          <ActivityIndicator color={theme.color.p2} size="small" />
+        ) : (
+          title
+        )}
       </CustomText>
     </Pressable>
   );
