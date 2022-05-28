@@ -12,8 +12,22 @@ import CustomFlex from '../../layouts/CustomFlex';
 import CustomInput from '../../atoms/CustomInput';
 import useFormStep2 from '../../../CustomHooks/useFormStep2';
 import CustomButton from '../../atoms/CustomButton';
+import {useNavigation, useRoute} from '@react-navigation/native';
+
+function sendPhone(navigation, form, params) {
+  form.submit.setLoading(true);
+  setTimeout(() => {
+    console.log('firstname =>', params.firstname);
+    console.log('lastname =>', params.lastname);
+    console.log('phone =>', form.phone.value);
+    form.submit.setLoading(false);
+    navigation.navigate('FormSuccess');
+  }, 2000);
+}
 
 function Form() {
+  const navigation = useNavigation();
+  const route = useRoute();
   const form = useFormStep2();
   useEffect(() => {
     const formIsOk = !form.phone.ok;
@@ -27,7 +41,7 @@ function Form() {
         center
         title="Continuar"
         type="submit"
-        onPress={() => {}}
+        onPress={() => sendPhone(navigation, form, route.params)}
       />
     </CustomFlex>
   );
