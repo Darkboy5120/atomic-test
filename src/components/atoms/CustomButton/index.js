@@ -36,7 +36,6 @@ function CustomButton({
     style,
     disabledStyle,
   ];
-  console.log(ok);
   return (
     <Pressable
       disabled={!ok}
