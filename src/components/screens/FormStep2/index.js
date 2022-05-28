@@ -27,8 +27,7 @@ function Form() {
         center
         title="Continuar"
         type="submit"
-        onPress={() => {
-        }}
+        onPress={() => {}}
       />
     </CustomFlex>
   );
@@ -40,13 +39,15 @@ function FormStep2() {
       <ScrollView>
         <CustomSection>
           <CustomImage
-            resizeMode="stretch"
+            resizeMode="contain"
             style={styles.background1}
             source={HomeBackgroundImage}
           />
           <ThisIsAtomicLabs />
           <FormProgress step={2} />
-          <CustomText>Necesitamos validar tu número para empezar</CustomText>
+          <CustomText style={styles.fooMarginBottom}>
+            Necesitamos validar tu número para empezar
+          </CustomText>
           <CustomText>
             Ingresa tu número a 10 dígitos y te enviaremos un código SMS
           </CustomText>
