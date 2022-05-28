@@ -21,6 +21,7 @@ function getFormData(step) {
           <CustomHeader>TE QUEREMOS</CustomHeader>
           <CustomHeader contrast> CONOCER</CustomHeader>
         </HeaderContainer>,
+        '33%',
       ]
     : [
         DotCheck,
@@ -30,11 +31,13 @@ function getFormData(step) {
           <CustomHeader>VALIDA TU</CustomHeader>
           <CustomHeader contrast> CELULAR</CustomHeader>
         </HeaderContainer>,
+        '100%',
       ];
 }
 
 function FormProgress({step = 1}) {
-  const [step1Label, step2Label, dotDetails, detailsText] = getFormData(step);
+  const [step1Label, step2Label, dotDetails, detailsText, progress] =
+    getFormData(step);
   return (
     <CustomSection>
       <CustomFlex row>
@@ -45,7 +48,7 @@ function FormProgress({step = 1}) {
           <CustomImage size={30} source={step2Label} />
         </CustomFlex>
       </CustomFlex>
-      <CustomProgressBar progress="33%" />
+      <CustomProgressBar progress={progress} />
       <CustomFlex row flex={1} style={styles.detailsContainer}>
         <CustomFlex flex={3} style={styles.detailsDotContainer}>
           <CustomImage size={40} source={dotDetails} />
