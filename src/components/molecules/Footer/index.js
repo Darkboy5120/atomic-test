@@ -9,7 +9,7 @@ import styles from './styles';
 function Footer() {
   return (
     <CustomFlex style={styles.container}>
-      <CustomText color={theme.color.other2}>
+      <CustomText s color={theme.color.other2}>
         © 2020 AtomicLabs. Todos los derechos reservados
       </CustomText>
       <CustomLink target="#">Aviso de privacidad</CustomLink>

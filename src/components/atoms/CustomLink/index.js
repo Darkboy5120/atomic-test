@@ -6,7 +6,9 @@ import styles from './styles';
 function CustomLink({children}) {
   return (
     <View style={styles.container}>
-      <CustomText style={styles.link}>{children}</CustomText>
+      <CustomText s style={styles.link}>
+        {children}
+      </CustomText>
     </View>
   );
 }
