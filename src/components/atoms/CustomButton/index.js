@@ -13,6 +13,8 @@ function CustomButton({
   width,
   center,
   onPress,
+  ok = true,
+  loading,
 }) {
   const typeStylesArr = {
     button: [styles.buttonContainer, styles.buttonText],
@@ -24,6 +26,7 @@ function CustomButton({
   const centerStyle = center ? {alignSelf: 'center'} : null;
   bgColor = bgColor ?? {backgroundColor: theme.color.p1};
   textColor = textColor ?? {color: theme.color.s1};
+  const disabledStyle = !ok ? styles.disabled : null;
   const buttonStyle = [
     centerStyle,
     {width},
@@ -31,9 +34,15 @@ function CustomButton({
     typeStyle[0],
     textColor,
     style,
+    disabledStyle,
   ];
+  console.log(ok);
   return (
-    <Pressable onPress={onPress} title={title} style={buttonStyle}>
+    <Pressable
+      disabled={!ok}
+      onPress={onPress}
+      title={title}
+      style={buttonStyle}>
       <CustomText style={typeStyle[1]} center bold>
         {title}
       </CustomText>

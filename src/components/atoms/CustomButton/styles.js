@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: theme.spacing.l,
   },
+  disabled: {
+    opacity: 0.5,
+  },
   buttonText: {
     color: theme.color.s1,
   },
